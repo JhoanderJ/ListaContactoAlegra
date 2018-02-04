@@ -1,13 +1,44 @@
-
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>{{contacto.nombre}}</ion-title>
+  <ion-navbar color="asd">
+    <ion-title>{{item.name}}</ion-title>
+    
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-card>
+      <ion-buttons end>
+          <button ion-button (click)="eliminarContacto(item)" (click)="showAlert()">
+            <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+          </button>
+        </ion-buttons>
+    <img src="https://www.ibertronica.es/blog/wp-content/uploads/2016/02/perfil-azul.png"/>
+    <ion-card-content>
+      <ion-card-title>
+        Datos Basicos
+        </ion-card-title>
+        <ion-row>
+          <ion-col>
+            <h2>Correo: </h2> {{item.email}}</ion-col>
+            <ion-row>
+              <ion-col>
+                <h2>Telefono: </h2> {{item.phonePrimary}}</ion-col>
+                
+            </ion-row>
+        </ion-row>
+        
+        
+        <br/>
+        <ion-row>
+          <ion-col>
+            <h2>Identificacion: </h2> {{item.identification}}</ion-col>
+            
+        </ion-row>
+        <br/>
+    </ion-card-content>
+  </ion-card>
+  
 </ion-content>
+
+
+
